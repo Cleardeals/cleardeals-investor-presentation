@@ -1,0 +1,75 @@
+/* Comprehensive fix for consistent width across all page sections */
+
+/* Executive summary container styling to match the width of other components */
+#executive-summary {
+  width: 100%;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  box-sizing: border-box;
+  padding-top: 4em !important; /* Reduced top padding, overriding the 2em from investor_report.css */
+}
+
+/* Executive summary content styling */
+#executive-summary h2,
+#executive-summary p,
+#executive-summary ul {
+  width: 100%;
+  max-width: 100%; /* Use 100% of the parent container */
+  margin-left: 0;
+  margin-right: 0;
+}
+
+/* Reduce padding-top for h2 in executive summary */
+#executive-summary h2 {
+  padding-top: 0;
+  margin-top: 0;
+  margin-bottom: 0.8em; /* Keep some space below the heading */
+}
+
+/* Executive summary bullet points styling */
+.executive-summary-benefits {
+  list-style-type: none;
+  padding-left: 0.5em;
+  margin-top: 1em;
+}
+
+.executive-summary-benefits li {
+  position: relative;
+  padding-left: 1.5em;
+  margin-bottom: 0.8em;
+  line-height: 1.5;
+}
+
+.executive-summary-benefits li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: var(--primary);
+  font-size: 1.2em;
+  text-shadow: 0 1px 2px rgba(99, 91, 255, 0.2);
+}
+
+/* Apply consistent width to standard content elements */
+h1, h2, h3, h4, h5, h6, p, ul, ol, blockquote, hr {
+  width: 100%;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  box-sizing: border-box;
+}
+
+/* Ensure consistent width for all custom sections */
+.feature-section, 
+.timeline,
+.metrics,
+.metrics-grid,
+table,
+.card-grid,
+.gradient-section {
+  width: 100%;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  box-sizing: border-box;
+}

@@ -1,0 +1,15 @@
+/* Fix for gradient line positioning under the main heading in hero section */
+.hero h1::after {
+  left: 0;        /* Align to the left edge of the h1 */
+  width: 100%;    /* Span full width of the h1 */
+  bottom: -10px;  /* Push down slightly to create space */
+  height: 4px;    /* Make it slightly thicker */
+}
+
+/* Make sure the hero h1 has proper bottom padding to account for the line */
+.hero h1 {
+  padding-bottom: 15px;
+  margin-bottom: 20px;
+}
+
+/* Executive summary styling is now handled in section-width-fix.css */

@@ -1,0 +1,95 @@
+/* Print styles for ClearDeals investor presentation */
+
+@media print {
+    /* General print styles */
+    body {
+        background-color: white !important;
+        color: black !important;
+        font-size: 12pt;
+        line-height: 1.5;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+    
+    /* Hide elements that don't make sense in print */
+    .loading-overlay,
+    .back-to-top,
+    .footer-social,
+    .cta-buttons,
+    .cta-graphic,
+    .hero-animation,
+    lottie-player {
+        display: none !important;
+    }
+    
+    /* Simplify layout */
+    .hero,
+    .feature-section,
+    .cta-section,
+    .modern-footer {
+        box-shadow: none !important;
+        margin: 1em 0 !important;
+        padding: 1em !important;
+        page-break-inside: avoid;
+        border: 1px solid #eee;
+    }
+    
+    /* Ensure proper page breaks */
+    h1, h2, h3 {
+        page-break-after: avoid;
+        page-break-inside: avoid;
+    }
+    
+    h2 {
+        margin-top: 20pt !important;
+        font-size: 16pt;
+    }
+    
+    /* Force background colors */
+    * {
+        -webkit-print-color-adjust: exact !important;
+        color-adjust: exact !important;
+        print-color-adjust: exact !important;
+    }
+    
+    /* Ensure images print well */
+    img {
+        max-width: 100% !important;
+        page-break-inside: avoid;
+    }
+    
+    /* Simplify hero section for print */
+    .hero-flex-container,
+    .hero-bottom-container {
+        flex-direction: column !important;
+        align-items: flex-start !important;
+    }
+    
+    .hero-content {
+        max-width: 100% !important;
+    }
+    
+    /* Make sure charts print well */
+    .chart-container {
+        height: auto !important;
+        page-break-inside: avoid;
+    }
+    
+    /* URLs in links */
+    a[href]:after {
+        content: " (" attr(href) ")";
+        font-size: 90%;
+        color: #666;
+    }
+    
+    /* Don't show URL for internal links */
+    a[href^="#"]:after {
+        content: "";
+    }
+    
+    /* Headers and footers */
+    @page {
+        margin: 2cm;
+    }
+}
